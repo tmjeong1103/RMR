@@ -3,17 +3,13 @@
   <head>
     <title>Robust Robot Motion Retargeting: Rig Unification and Application to Diverse Robots</title>
     <link rel="icon" type="image/x-icon" href="static/images/rilab_logo.jpg">
-    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-    rel="stylesheet">
-  
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
     <link rel="stylesheet" href="static/css/bulma.min.css">
     <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
     <link rel="stylesheet" href="static/css/bulma-slider.min.css">
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-    <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <link rel="stylesheet" href="static/css/index.css">
-  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
     <script defer src="static/js/fontawesome.all.min.js"></script>
@@ -103,7 +99,7 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
+      <video poster="" id="tree" autoplay controls muted loop width="100%" height="100%">
         <!-- Your video here -->
         <source src="static/videos/banner_video.mp4" type="video/mp4">
       </video>
@@ -142,8 +138,8 @@
       <h2 class="title is-3">Overview</h2>
       <div class="columns">
         <div class="column">
-          <div style="text-align: center;"> <!-- 이미지를 가운데 정렬하는 스타일 -->
-            <img src="static/images/figure2.png" alt="MY ALT TEXT" width="700" height="auto"/>
+          <div style="text-align: center;"> 
+            <img src="static/images/figure2.png" alt="MY ALT TEXT" width="800" height="auto"/>
           </div>
           <p>
             <b>(A)</b> Extracting human skeleton motion from motion capture systems or pose estimations.
@@ -164,7 +160,7 @@
       <h2 class="title is-3">Common-rigging for motion refinement</h2>
       <div id="results-commonrigging" class="Common-Rigging results-commonrigging">
         <div class="item">
-          <video controls autoplay muted loop height="100%">
+          <video controls autoplay muted loop width="100%" height="100%">
             <source src="static/videos/common-rigging.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
@@ -190,7 +186,7 @@
       <h2 class="title is-3">Flexible motion retargeting to diverse robots</h2>
       <div id="results-mr" class="motion-retargeting results-mr">
         <div class="item">
-          <video controls autoplay muted loop height="100%">
+          <video controls autoplay muted loop width="100%" height="100%">
             <source src="static/videos/mr.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
@@ -213,25 +209,44 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Real robot experimets</h2>
-      <div id="results-realrobot" class="realrobot results-realrobot">
-        <div class="item">
-          <video controls autoplay muted loop height="100%">
+      <h2 class="title is-3">Real Robot Experiments</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="carousel-item">
+          <video poster="" id="video1" controls muted width="100%" height="100%">
             <source src="static/videos/result_video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
           </video>
-          <p>
-            To validate the effectiveness and practicality of our motion retargeting approach, we conducted experiments on three real robot platforms: AMBIDEX, THORMANG, and JF2.
-            These robots have distinct kinematic structures and physical properties, showcasing the versatility of our pipeline.
-            The retargeted motions, which were generated using various motion sources such as MoCap data and pose estimation from RGB videos, were successfully executed on the real robots.
-            The experiments demonstrated the ability of our approach to generate smooth, stable, and expressive robot motions that closely resemble the original human motions.
-          </p>
         </div>
+        <div class="carousel-item">
+          <video poster="" id="video2" controls muted width="100%" height="100%">
+            <source src="static/videos/JF-demo.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="carousel-description">
+        <p>
+          To validate the effectiveness and practicality of our motion retargeting approach, we conducted experiments on three real robot platforms: AMBIDEX, THORMANG, and JF2.
+          These robots have distinct kinematic structures and physical properties, showcasing the versatility of our pipeline.
+          The retargeted motions, which were generated using various motion sources such as MoCap data and pose estimation from RGB videos, were successfully executed on the real robots.
+          The experiments demonstrated the ability of our approach to generate smooth, stable, and expressive robot motions that closely resemble the original human motions.
+        </p>
       </div>
     </div>
   </div>
 </section>
 <!-- End Real Robot motions  -->
+  <!-- Initialize Bulma Carousel -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var carousels = bulmaCarousel.attach('#results-carousel', {
+        slidesToScroll: 1,
+        slidesToShow: 1,
+        loop: true,
+        autoplay: false,  // Turn off autoplay
+        autoplaySpeed: 0,
+        pauseOnHover: true
+      });
+    });
+  </script>
 
 <!-- Pipeline Video -->
 <section class="hero is-small">
@@ -240,7 +255,7 @@
       <h2 class="title is-3">Robust Robot Motion Retargeting Pipeline: From Video Capture to Real-Time Execution</h2>
       <div id="results-pipeline" class="pipeline results-pipeline">
         <div class="item">
-          <video controls autoplay muted loop height="100%">
+          <video controls autoplay muted loop width="100%" height="100%">
             <source src="static/videos/pipeline.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
@@ -261,62 +276,30 @@
 <!-- End Pipeline Video  -->
 
 
-<!-- Video carousel -->
+<!-- Dance with Robot -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
+      <h2 class="title is-3">Dance with AMBIDEX</h2>
+      <div id="results-pipeline" class="pipeline results-pipeline">
         <div class="item">
-          <video controls height="100%">
+          <video controls autoplay muted loop width="100%" height="100%">
             <source src="static/videos/dance_with.mp4" type="video/mp4">
-            Your browser does not support the video tag.
           </video>
-          <h2 class="subtitle has-text-centered">
-            First video description.
-          </h2>
-        </div>
-        <div class="item">
-          <video controls height="100%">
-            <source src="static/videos/dance_with.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <h2 class="subtitle has-text-centered">
-            Second video description.
-          </h2>
-        </div>
-        <div class="item">
-          <video controls height="100%">
-            <source src="static/videos/dance_with.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <h2 class="subtitle has-text-centered">
-            Third video description.
-          </h2>
-        </div>
-        <div class="item">
-          <video controls height="100%">
-            <source src="static/videos/dance_with.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <h2 class="subtitle has-text-centered">
-            Fourth video description.
-          </h2>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End video carousel -->
-
-
+<!-- End Dance with Robot  -->
 
 <!-- Paper poster -->
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title">Poster</h2>
+      <h2 class="title">Paper</h2>
 
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+      <iframe  src="static/pdfs/paper.pdf" width="100%" height="550">
           </iframe>
         
       </div>
