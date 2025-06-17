@@ -25,13 +25,13 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Robust Robot Motion Retargeting: Rig Unification and Application to Diverse Robots</h1>
-            <div class="is-size-5 publication-authors">
+            <h1 class="title is-1 publication-title">Robust and Expressive Humanoid Motion Retargeting via Optimization-Based Rig Unification</h1>
+            <div class="is-size-4 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Taemoon Jeong</a><sup>1</sup>,</span>
+                <a href="https://steadfast-helicona-c82.notion.site/?pvs=143" target="_blank">Taemoon Jeong</a><sup>1</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Taehyun Byun</a><sup>1</sup>,</span>
+                  <a href="https://sites.google.com/view/taehyun-byun/home?authuser=0" target="_blank">Taehyun Byun</a><sup>1</sup>,</span>
                   <span class="author-block">
                     <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Jihoon Kim</a><sup>2</sup>,</span>
                     <span class="author-block">
@@ -45,19 +45,33 @@
                           <span class="author-block">
                             <a href="Eighth AUTHOR PERSONAL LINK" target="_blank">Joohyung Kim</a><sup>5</sup>,</span>
                             <span class="author-block">
-                              <a href="Ninth AUTHOR PERSONAL LINK" target="_blank">Sungjoon Choi</a><sup>1*</sup>
+                              <a href="https://sites.google.com/view/sungjoon-choi/home?authuser=0" target="_blank">Sungjoon Choi</a><sup>1*</sup>
                   </span>
                   </div>
 
-                  <div class="is-size-5 publication-authors">
+                  <div class="is-size-4 publication-authors">
                     <span class="author-block">Korea University<sup>1</sup>, 
                       CINAMON<sup>2</sup>, 
                       Rainbow robotics<sup>3</sup>, 
-                      NAVER LABS<sup>4</sup>, 
+                      NAVER LABS<sup>4</sup>,<br>
                       University of Illinois Urbana-Champaign<sup>5</sup>
                       <br></span>
                     <span class="eql-cntrb"><small><br><sup>*</sup>Corresponding Author</small></span>
                   </div>
+
+                  <!-- Affiliations Logos -->
+                <div class="is-flex is-justify-content-center is-align-items-center" style="gap: 2rem; flex-wrap: wrap; margin-top: 1rem;">
+                  <img src="static/images/ku.png" alt="Korea Univ" style="height: 100px;">
+                  <img src="static/images/cinamon.jpg" alt="CINAMON" style="height: 100px;">
+                  <img src="static/images/rainbow.png" alt="Rainbow Robotics" style="height: 100px;">
+                  <img src="static/images/labs.png" alt="NAVER LABS" style="height: 100px;">
+                  <img src="static/images/uiuc.png" alt="UIUC" style="height: 100px;">
+                </div>
+
+                  <!-- Conference Name -->
+                  <p class="is-size-4" style="margin-top: 0.5em; color: #666;">
+                    Accepted to <strong>IROS 2025</strong>
+                  </p>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
@@ -103,7 +117,7 @@
         <!-- Your video here -->
         <source src="static/videos/banner_video.mp4" type="video/mp4">
       </video>
-      <p>
+      <p class="is-size-5">
         This video is a motion result retargeted from a human motion video to the AMBIDEX robot.
         The AMBIDEX robot performs movements smoothly, ensuring no issues such as collisions occur.
         The video was filmed at the Naver 1784 building.
@@ -120,16 +134,13 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>
-            We propose a robust and automated pipeline for motion retargeting, enabling the easy generation of feasible motions for diverse humanoids using various types of motion data. 
-            Our primary focus is generating feasible and expressive robot movements for human-robot interaction and entertainment applications. 
-            To address challenges related to different kinematic configurations in motion data, we unify these configurations into a single predefined rig. 
-            The motion trajectory of the unified rig is refined to be feasible on a robot, considering the center of mass and foot contact. 
-            The refined trajectory is then retargeted to the robot. 
-            Additionally, we consider the physical limitations of robots, including joint angle limits, velocity-acceleration restrictions, and self-collision. 
-            We adjust the robot's trajectory to closely follow the source motion. 
-            The only manual step in our methodology is initially setting the joints of interest (JOI) of the robot, which are the specific joints that directly correspond to those of the unified rig. 
-            Our methodology has been successfully applied to 12 robots in simulation and validated on three real robots, demonstrating its effectiveness.
+          <p class="is-size-5">
+            Humanoid robots are increasingly being developed for seamless interaction with humans in diverse domains, yet generating expressive and physically-feasible motions remains a core challenge. 
+            We propose a robust and automated pipeline for motion retargeting that enables the generation of natural, stable, and highly expressive motions for a wide variety of humanoid robots using different motion data sources, including noisy pose estimations.
+            To ensure robustness, our approach unifies motions from different kinematic structures into a common canonical rig, systematically refines the motion trajectory to address infeasible poses, enforces foot-contact constraints, and enhances stability.
+            The retargeted motion is then refined to closely follow the source motion while respecting each robot's physical limits.
+            Through extensive experiments on 12 simulated robots and validation on three real robots, we show that our methodology reliably produces expressive upper-body movements with consistent foot contact.
+            This work represents an important step towards automating robust and expressive motion generation for humanoid robots, enabling deployment in various real-world scenarios.
           </p>
         </div>
       </div>
@@ -141,19 +152,19 @@
 <!-- Overview -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
+    <div class="container is-max-desktop">
       <!-- Paper Image. -->
       <h2 class="title is-3">Overview</h2>
       <div class="columns">
         <div class="column">
           <div style="text-align: center;"> 
-            <img src="static/images/figure2.png" alt="MY ALT TEXT" width="800" height="auto"/>
+            <img src="static/images/figure2.png" alt="MY ALT TEXT" width="1000" height="auto"/>
           </div>
-          <p>
-            <b>(A)</b> Extracting human skeleton motion from motion capture systems or pose estimations.
-            <b>(B)</b> Common-rigging process, which includes optimization-based methods called pre-rigging and post-rigging, aims to unify different human skeleton structures into a single predefined rig, referred to as a common-rig.
-            <b>(C)</b> Robot motion retargeting consists of Direction vector-based robot target pose, Robot motion trajectory adjustment, and Post-processing. The process generates feasible real robot motions that preserve the features of the source human motion.
-          </p>
+          <div class="content is-size-5 has-text-justified" style="margin-top: 1rem;">
+            <p><strong>(A)</strong> Human motion data is first extracted from motion capture systems or 3D pose estimation methods. These inputs may include high-fidelity MoCap recordings or noisy video-based estimations.</p>
+            <p><strong>(B)</strong> The <strong>common-rigging process</strong> converts various human skeleton structures into a single unified rig. This step includes <strong>pre-rigging</strong> (to match proportions and joint constraints) and <strong>post-rigging</strong> (to correct foot placement, align the center of mass, and eliminate self-collisions).</p>
+            <p><strong>(C)</strong> The refined motion is then <strong>retargeted to diverse robots</strong> using a direction vector-based approach. Joint trajectories are optimized through inverse kinematics, enforcing robot-specific constraints such as joint limits and collision avoidance. The final result is a physically-feasible robot motion that preserves the expressiveness of the original human movement.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -164,7 +175,7 @@
 <!-- Common-Rigging Video -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
+    <div class="container is-max-desktop">
       <h2 class="title is-3">Common-rigging for motion refinement</h2>
       <div id="results-commonrigging" class="Common-Rigging results-commonrigging">
         <div class="item">
@@ -172,13 +183,12 @@
             <source src="static/videos/common-rigging.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-          <p>
-            Common-Rigging is a process that unifies motion data with different skeleton structures into a single, standardized rig.
-            In the pre-rigging stage, various human skeletons are retargeted to a predefined common rig.
-            This common rig incorporates a rigid body structure and physical properties such as mass and moment of inertia, which facilitate the handling of self-collisions and the refinement of noisy poses.
-            The post-rigging stage utilizes the physical properties of the common rig to refine the motion.
-            Specifically, it considers feet contact and COM position to correct physically implausible poses and smoothen noisy motions.
-            The resulting refined motion becomes a stable and feasible motion suitable for robots.
+          <p class="is-size-5">
+            <strong>Common-Rigging</strong> is a critical step that unifies motion data from different skeleton structures into a single, standardized rig.
+            In the <strong>Pre-rigging</strong> stage, various human skeletons are retargeted to a predefined common rig using inverse kinematics.
+            This rig incorporates a rigid body structure and physical properties such as <strong>mass</strong> and <strong>moment of inertia</strong>, which help handle <strong>self-collisions</strong> and refine noisy poses.
+            The <strong>Post-rigging</strong> stage uses these physical properties to refine the motion further—enforcing <strong>foot-ground contact</strong>, aligning the <strong>center of mass (COM)</strong>, and smoothing out physically implausible artifacts.
+            As a result, the final trajectory becomes both <strong>physically feasible</strong> and <strong>robot-executable</strong>.
           </p>
         </div>
       </div>
@@ -190,7 +200,7 @@
 <!-- Robot motion retargeting Video -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
+    <div class="container is-max-desktop">
       <h2 class="title is-3">Flexible motion retargeting to diverse robots</h2>
       <div id="results-mr" class="motion-retargeting results-mr">
         <div class="item">
@@ -198,13 +208,21 @@
             <source src="static/videos/mr.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-          <p>
-            Our motion retargeting pipeline adapts the unified motion from the common rig to various robot platforms with different kinematic structures and physical constraints.
-            The process begins by defining the joints of interest (JOI) for each robot, which correspond to the joints of the common rig.
-            A direction vector-based approach is then employed to compute the target pose in the robot's task space, considering the link lengths of the robot.
-            The target pose serves as the input for the inverse kinematics problem, which is solved to obtain the robot's joint angles while satisfying robot-specific constraints such as joint limits and self-collision avoidance.
-            The robot's motion trajectory is further optimized to closely follow the reference motion while ensuring smoothness and feasibility.
-            This flexible pipeline enables the generation of expressive and realistic motions for a wide range of humanoid robots, as demonstrated by the diverse retargeted robot motions showcased in the accompanying visual materials.
+          <p class="is-size-5">
+            Our motion retargeting pipeline adapts the unified motion from the common rig to <strong>various robot platforms</strong> with different kinematic structures and physical constraints.
+          </p>
+          <p class="is-size-5">
+            The process begins by identifying <strong>joints of interest (JOI)</strong> for each robot, which correspond to key joints in the common rig.
+            A <strong>direction vector-based approach</strong> is then used to compute the robot’s target pose by scaling directional vectors according to each robot’s link lengths.
+          </p>
+          <p class="is-size-5">
+            The resulting target pose is used as input to an <strong>inverse kinematics (IK)</strong> solver, which computes joint angles that respect <strong>robot-specific constraints</strong> such as joint limits, velocity bounds, and <strong>self-collision avoidance</strong>.
+          </p>
+          <p class="is-size-5">
+            After solving IK, the motion trajectory is further <strong>optimized to track the original motion</strong> while ensuring physical feasibility and trajectory smoothness.
+          </p>
+          <p class="is-size-5">
+            This <strong>flexible and generalizable pipeline</strong> enables the generation of expressive, physically-valid motions across a diverse set of humanoid robots, as demonstrated in the accompanying visual materials.
           </p>
         </div>
       </div>
@@ -216,7 +234,7 @@
 <!-- Real Robot motions Video -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
+    <div class="container is-max-desktop">
       <h2 class="title is-3">Real Robot Experiments</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="carousel-item">
@@ -231,12 +249,18 @@
         </div>
       </div>
       <div class="carousel-description">
-        <p>
-          To validate the effectiveness and practicality of our motion retargeting approach, we conducted experiments on three real robot platforms: AMBIDEX, THORMANG, and JF2.
-          These robots have distinct kinematic structures and physical properties, showcasing the versatility of our pipeline.
-          The retargeted motions, which were generated using various motion sources such as MoCap data and pose estimation from RGB videos, were successfully executed on the real robots.
-          The experiments demonstrated the ability of our approach to generate smooth, stable, and expressive robot motions that closely resemble the original human motions.
-        </p>
+      <p class="is-size-5">
+        To evaluate the <strong>effectiveness</strong> and <strong>practical applicability</strong> of our motion retargeting pipeline, we conducted real-world experiments on three humanoid platforms: <strong>AMBIDEX</strong>, <strong>THORMANG</strong>, and <strong>JF2</strong>.
+      </p>
+      <p class="is-size-5">
+        These robots possess <strong>distinct kinematic structures</strong> and <strong>physical characteristics</strong>, such as different joint limits, link geometries, and dynamic properties, thereby validating the <strong>generalizability</strong> of our method.
+      </p>
+      <p class="is-size-5">
+        The retargeted motions—generated from both <strong>high-quality MoCap data</strong> and <strong>noisy 3D pose estimations</strong> from RGB videos—were successfully deployed without additional tuning.
+      </p>
+      <p class="is-size-5">
+        Our experiments confirmed that the proposed approach can produce <strong>smooth</strong>, <strong>stable</strong>, and <strong>expressive upper-body motions</strong> that closely follow the original human movement, even under foot-fixed constraints.
+      </p>
       </div>
     </div>
   </div>
@@ -259,7 +283,7 @@
 <!-- Pipeline Video -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
+    <div class="container is-max-desktop">
       <h2 class="title is-3">Robust Robot Motion Retargeting Pipeline: Real-Time Execution</h2>
       <div id="results-pipeline" class="pipeline results-pipeline">
         <div class="item">
@@ -267,14 +291,23 @@
             <source src="static/videos/pipeline.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-          <p>
-            This video demonstrates the entire workflow of our robust robot motion retargeting pipeline.
-            The process begins with capturing human motion using a video camera.
-            The captured video is then fed into our pipeline, where the human pose is estimated using state-of-the-art pose estimation techniques.
-            The estimated motion undergoes a common-rigging process to unify the skeleton structure and refine the motion, ensuring its suitability for robot execution.
-            The refined motion is then retargeted to the robot platform using our flexible and adaptive retargeting approach, which considers the robot's specific kinematic structure and physical constraints.
-            Finally, the retargeted motion is executed on the real robot in real-time, showcasing the smoothness, stability, and expressiveness of the generated motion.
-            The seamless integration of the various stages of the pipeline, from video capture to real-time robot execution, highlights the practicality and effectiveness of our approach for real-world applications.  
+          <p class="is-size-5">
+            This video illustrates the <strong>end-to-end workflow</strong> of our <strong>robust robot motion retargeting pipeline</strong>.
+          </p>
+          <p class="is-size-5">
+            The process begins with capturing human motion using a <strong>video camera</strong>. The recorded footage is processed through a <strong>state-of-the-art 3D pose estimation algorithm</strong>, extracting joint-level motion trajectories from monocular RGB input.
+          </p>
+          <p class="is-size-5">
+            The estimated motion is then passed through the <strong>common-rigging module</strong>, where skeletal inconsistencies are resolved and physical feasibility is enforced, preparing the motion for robot deployment.
+          </p>
+          <p class="is-size-5">
+            Next, the refined motion is <strong>retargeted to a target robot</strong> via our flexible pipeline, which accounts for the robot's unique <strong>kinematic configuration</strong> and <strong>physical constraints</strong>, such as joint limits and collision boundaries.
+          </p>
+          <p class="is-size-5">
+            Finally, the resulting trajectory is <strong>executed in real time</strong> on the robot, demonstrating <strong>smoothness</strong>, <strong>stability</strong>, and <strong>expressiveness</strong> that faithfully reflect the original human motion.
+          </p>
+          <p class="is-size-5">
+            This seamless integration—from human video input to real-world robotic execution—highlights the <strong>practicality and deployability</strong> of our framework in real-time human-robot interaction scenarios.
           </p>
         </div>
       </div>
@@ -287,7 +320,7 @@
 <!-- Dance with Robot -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
+    <div class="container is-max-desktop">
       <h2 class="title is-3">Dance with AMBIDEX</h2>
       <div id="results-pipeline" class="pipeline results-pipeline">
         <div class="item">
